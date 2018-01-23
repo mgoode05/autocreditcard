@@ -17,7 +17,7 @@ class SetUpTransaction extends Component {
         };
     }
 
-    handleDayClickOut(day, {selected, disabled}) {
+    handleDayClickOut = (day, {selected, disabled}) => {
         if (disabled) {
             return;
         }
@@ -26,9 +26,10 @@ class SetUpTransaction extends Component {
             return; 
         }
         this.setState({ selectedDayOut: day});
+        console.log(day);
     };
 
-    handleDayClickIn(day, {selected, disabled}) {
+    handleDayClickIn = (day, {selected, disabled}) => {
         if (disabled) {
             return;
         }
@@ -37,6 +38,7 @@ class SetUpTransaction extends Component {
             return; 
         }
         this.setState({ selectedDayIn: day});
+        console.log(day);
     }
 
     render() {
